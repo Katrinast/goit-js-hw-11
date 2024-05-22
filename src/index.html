@@ -9,13 +9,19 @@
   </head>
   <body>
     <section>
-      <form action="">
-        <label for="">
-          <input type="text" />
+      <form class="search-form" autocomplete="off">
+        <label class="form-label">
+          <input
+            name="search"
+            class="form-input"
+            type="text"
+            placeholder="Search images..."
+          />
         </label>
 
-        <button type="submit"></button>
+        <button class="form-button" type="submit">Search</button>
       </form>
+      <ul class="gallery"></ul>
     </section>
 
     <script type="module" src="./main.js"></script>
