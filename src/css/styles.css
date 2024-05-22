@@ -31,6 +31,7 @@ section {
   display: flex;
   gap: 8px;
   justify-content: center;
+  margin-bottom: 32px;
 }
 
 .form-input {
@@ -69,4 +70,68 @@ section {
 
 .form-button:hover {
   background-color: #6c8cff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.gallery-item {
+  width: 360px;
+  width: calc((100% - 48px) / 3);
+}
+
+.gallery-img {
+  width: 360px;
+}
+
+.info {
+  padding: 4px 20px;
+  display: flex;
+  gap: 32px;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  border-left: 1px solid #808080;
+  background: #fff;
+}
+
+.info p {
+  text-align: center;
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
+.info b {
+  display: block;
+
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+}
+
+.loader {
+  display: inline-block;
+  box-sizing: border-box;
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin: 0 auto;
+  width: 256px;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
