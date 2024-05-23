@@ -1,11 +1,11 @@
 import { fetchImages } from "./js/pixabay-api.js";
-import { renderImages } from "./js/render-functions.js";
+import { renderImages, initializeLightbox } from "./js/render-functions.js";
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 
 
-let lightbox;
+
 const refsEl = {
   searchForm: document.querySelector('.search-form'),
   inputForm: document.querySelector('.form-input'),
@@ -60,6 +60,7 @@ function onSearchFormSubmit(event) {
 });
       }
       gallery.innerHTML = renderImages(imagesData.hits);
+      initializeLightbox();
       event.target.reset();
     })
     .catch(error => console.log(error))
